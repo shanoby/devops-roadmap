@@ -1,51 +1,62 @@
-# Задание 2: K8s in Cloud
+# Задание 2: K8s in Cloud (Self-hosted)
 
 ## 🎯 Цель
-Развернуть Kubernetes кластер в облаке.
+Развернуть Kubernetes кластер локально (self-hosted) с Load Balancer.
 
 ## 📋 Задачи
 
-### 1. EKS/AKS/GKE
+### 1. Local K8s
+- [ ] Установить kind/minikube/k3s
 - [ ] Создать кластер
-- [ ] Настроить node groups
-- [ ] Настроить networking
+- [ ] Настроить ingress controller
 
 ### 2. Load Balancer
+- [ ] Установить MetalLB (для kind)
 - [ ] Создать Service LoadBalancer
-- [ ] Настроить DNS
-- [ ] SSL сертификат
+- [ ] Настроить DNS (hosts файл)
 
 ### 3. Monitoring
 - [ ] Установить metrics server
-- [ ] Настроить CloudWatch/Monitor
+- [ ] Настроить Prometheus
 - [ ] Алерты
 
-## 🔧 Решение (EKS)
+## 🔧 Решение (kind)
 
 ```bash
-# Создание кластера
-eksctl create cluster \
-  --name my-cluster \
-  --region us-west-2 \
-  --nodegroup-name my-nodes \
-  --node-type t3.medium \
-  --nodes 3
+# Установка kind
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
+chmod +x ./kind
+sudo mv ./kind /usr/local/bin/kind
 
-# Приложение
-kubectl apply -f app-deployment.yaml
+# Создание кластера с MetalLB
+cat <<EOF | kind create cluster --config=-
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+networking:
+  disableDefaultCNI: false
+nodes:
+- role: control-plane
+- role: worker
+- role: worker
+EOF
 
-# Load Balancer
-kubectl expose deployment app --port=80 --type=LoadBalancer
+# MetalLB
+kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.10/config/manifests/metallb-native.yaml
+
+# Ingress
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
 
 ## ✅ Проверка
 - [ ] Кластер создан
-- [ ] Node groups работают
+- [ ] MetalLB работает
 - [ ] Load Balancer доступен
-- [ ] DNS запись создана
-- [ ] SSL сертификат валиден
+- [ ] Ingress работает
+- [ ] Metrics server установлен
 
 ## 📖 Документация
-- [EKS Docs](https://docs.aws.amazon.com/eks/)
-- [AKS Docs](https://learn.microsoft.com/en-us/azure/aks/)
-- [GKE Docs](https://cloud.google.com/kubernetes-engine/docs)
+- [kind](https://kind.sigs.k8s.io/) - Kubernetes in Docker
+- [minikube](https://minikube.sigs.k8s.io/) - локальный K8s
+- [k3s](https://k3s.io/) - легкий K8s
+- [MetalLB](https://metallb.universe.tf/) - load balancer для локального K8s
+- [AWS Free Tier](https://aws.amazon.com/free/) - бесплатный EKS (12 месяцев)
