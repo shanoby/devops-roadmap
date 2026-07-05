@@ -3,43 +3,57 @@
 ## 🎯 Что изучить
 
 ### Terraform
-- Providers, Resources, Variables, Outputs
-- State management (local, remote)
-- Modules
-- Workspaces
-- Functions (templatefile, lookup, coalesce)
+- **Providers** - AWS, Azure, GCP, Kubernetes, Helm
+- **Resources** - создание инфраструктуры
+- **Variables** - input, output, locals
+- **State management** - local, remote (S3, GCS, Terraform Cloud)
+- **Modules** - создание, использование, registry
+- **Workspaces** - окружения
+- **Functions** - templatefile, lookup, coalesce, join, split
+- **Data sources** - чтение существующих ресурсов
 
 ### Ansible
-- Playbooks, Roles, Tasks
-- Inventory (static, dynamic)
-- Handlers, Templates (Jinja2)
-- Variables, Facts
+- **Playbooks** - YAML, tasks, handlers
+- **Roles** - структура, defaults, vars, templates
+- **Inventory** - static, dynamic, groups
+- **Handlers, Templates** - Jinja2, notify
+- **Variables, Facts** - host vars, group vars, magic variables
+- **Modules** - cloud, system, network
 
 ### Packer
-- Builders, Provisioners
-- Templates
-- HCL2
+- **Builders** - Amazon, Azure, Google, Docker
+- **Provisioners** - shell, file, ansible, chef, puppet
+- **Templates** - HCL2, variables, functions
+- **Post-processors** - docker-tag, docker-push
 
 ## 📖 Документация
-- [Terraform Registry](https://registry.terraform.io/)
-- [Learn Terraform](https://learn.hashicorp.com/terraform)
-- [Ansible Documentation](https://docs.ansible.com/)
+- [Terraform Registry](https://registry.terraform.io/) - провайдеры и модули
+- [Learn Terraform](https://learn.hashicorp.com/terraform) - интерактивные уроки
+- [Ansible Documentation](https://docs.ansible.com/) - официальная документация
+- [Ansible Galaxy](https://galaxy.ansible.com/) - роли
+- [Packer Docs](https://www.packer.io/docs) - официальная документация
 
-## ✅ Тесты для самоконтроля
+## ✅ Чекпоинты для самоконтроля
 
-### Тест 1: Terraform
-```hcl
-# Создайте модуль VPC:
-# - Переменные: cidr, azs, name
-# - Outputs: vpc_id, subnet_ids
-# - Security groups
-# - Remote state в S3
-```
+### Чекпоинт 1: Terraform
+- [ ] Понимаю providers и resources
+- [ ] Могу писать variables и outputs
+- [ ] Понимаю state management
+- [ ] Могу создавать модули
+- [ ] Понимаю workspaces
 
-### Тест 2: Ansible
-- Playbook для настройки сервера
-- Role для nginx
-- Шаблоны конфигураций
+### Чекпоинт 2: Ansible
+- [ ] Понимаю playbook structure
+- [ ] Могу создавать roles
+- [ ] Понимаю inventory
+- [ ] Могу использовать templates (Jinja2)
+- [ ] Понимаю handlers
+
+### Чекпоинт 3: Packer
+- [ ] Понимаю builders
+- [ ] Могу использовать provisioners
+- [ ] Понимаю HCL2
+- [ ] Могу создавать image pipeline
 
 ## 📁 Практические задания
 - [Задание 1: VPC Module](exercises/vpc-module.md)

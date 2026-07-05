@@ -3,32 +3,46 @@
 ## 🎯 Что изучить
 
 ### Тестирование инфраструктуры
-- Terratest (Go-based testing)
-- KitchenCI (Test Kitchen)
-- InSpec (compliance testing)
-- Serverspec
+- **Terratest** - Go-based testing, terraform, kubernetes, AWS
+- **KitchenCI** - Test Kitchen, kitchen-terraform, kitchen-docker
+- **InSpec** - compliance testing, CIS benchmarks, custom profiles
+- **Serverspec** - RSpec tests for infrastructure
 
 ### Chaos Engineering
-- Chaos Monkey
-- Litmus
-- Gremlin
-- Chaos Mesh
+- **Chaos Monkey** - Netflix OSS, random termination
+- **Litmus** - Kubernetes native, chaos experiments
+- **Gremlin** - commercial, various attack types
+- **Chaos Mesh** - Kubernetes, pod, network, stress chaos
 
 ## 📖 Документация
-- [Terratest](https://terratest.gruntwork.io/)
-- [Chaos Engineering](https://principlesofchaos.org/)
+- [Terratest](https://terratest.gruntwork.io/) - тестирование Terraform
+- [Chaos Engineering](https://principlesofchaos.org/) - принципы
+- [Test Kitchen](https://docs.chef.io/kitchen/) - тестирование Chef
+- [InSpec](https://docs.chef.io/inspec/) - compliance
+- [Litmus Docs](https://litmuschaos.io/docs/) - Kubernetes chaos
 
-## ✅ Тесты для самоконтроля
+## ✅ Чекпоинты для самоконтроля
 
-### Тест 1: Terratest
-- Тест для VPC модуля
-- Проверка созданных ресурсов
-- Интеграционные тесты
+### Чекпоинт 1: Terratest
+- [ ] Понимаю Go basics (functions, structs, testing)
+- [ ] Могу писать тесты для Terraform
+- [ ] Понимаю terraform.Options
+- [ ] Могу проверять созданные ресурсы
+- [ ] Понимаю cleanup
 
-### Тест 2: Chaos
-- Сценарий pod deletion
-- Сценарий network latency
-- Анализ результатов
+### Чекпоинт 2: InSpec
+- [ ] Понимаю RSpec синтаксис
+- [ ] Могу писать контролы
+- [ ] Понимаю CIS benchmarks
+- [ ] Могу запускать тесты
+- [ ] Понимаю отчеты
+
+### Чекпоинт 3: Chaos
+- [ ] Понимаю chaos engineering принципы
+- [ ] Могу создать chaos эксперимент
+- [ ] Понимаю pod deletion сценарий
+- [ ] Понимаю network latency сценарий
+- [ ] Понимаю анализ результатов
 
 ## 📁 Практические задания
 - [Задание 1: Infrastructure Tests](exercises/infrastructure-tests.md)

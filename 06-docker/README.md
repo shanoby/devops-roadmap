@@ -3,37 +3,46 @@
 ## 🎯 Что изучить
 
 ### Основы
-- Образы и контейнеры
-- Dockerfile (инструкции, best practices)
-- docker-compose (services, networks, volumes)
-- Сети (bridge, host, overlay)
+- **Образы и контейнеры** - image, container, layer, registry
+- **Dockerfile** - инструкции (FROM, RUN, COPY, ADD, CMD, ENTRYPOINT, ENV, EXPOSE, VOLUME)
+- **docker-compose** - services, networks, volumes, environment, depends_on
+- **Сети** - bridge, host, overlay, macvlan, none
 
 ### Продвинуто
-- Многоэтапная сборка (multi-stage)
-- Security scanning (Trivy, Clair)
-- Registry (Docker Hub, ECR, GCR)
-- Rootless контейнеры
+- **Многоэтапная сборка** - multi-stage, builder pattern
+- **Security scanning** - Trivy, Clair, Snyk, Docker Scout
+- **Registry** - Docker Hub, ECR, GCR, Harbor, quay.io
+- **Rootless контейнеры** - безопасность, user namespaces
+- **Docker Swarm** - оркестрация, services, secrets
 
 ## 📖 Документация
-- [Docker Documentation](https://docs.docker.com/)
-- [Docker Curriculum](https://docker-curriculum.com/)
+- [Docker Documentation](https://docs.docker.com/) - официальная документация
+- [Docker Curriculum](https://docker-curriculum.com/) - интерактивный курс
+- [Docker Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) - best practices
+- [Docker Compose](https://docs.docker.com/compose/) - compose документация
 
-## ✅ Тесты для самоконтроля
+## ✅ Чекпоинты для самоконтроля
 
-### Тест 1: Dockerfile
-```dockerfile
-# Соберите образ:
-# - База: alpine
-# - Приложение: nginx
-# - Размер < 50MB
-# - Healthcheck
-# - Non-root user
-```
+### Чекпоинт 1: Основы
+- [ ] Понимаю разницу между image и container
+- [ ] Могу писать Dockerfile
+- [ ] Понимаю lifecycle контейнера
+- [ ] Могу использовать docker-compose
+- [ ] Понимаю сети Docker
 
-### Тест 2: docker-compose
-- 3 сервиса: web, db, cache
-- Настроить networks
-- Volumes для данных
+### Чекпоинт 2: Dockerfile
+- [ ] Понимаю инструкции Dockerfile
+- [ ] Могу использовать .dockerignore
+- [ ] Понимаю layer cache
+- [ ] Могу оптимизировать размер образа
+- [ ] Понимаю healthcheck
+
+### Чекпоинт 3: Продвинуто
+- [ ] Могу писать multi-stage Dockerfile
+- [ ] Понимаю security scanning
+- [ ] Могу работать с registry
+- [ ] Понимаю rootless контейнеры
+- [ ] Понимаю Docker Swarm
 
 ## 📁 Практические задания
 - [Задание 1: Image Optimization](exercises/image-optimization.md)
