@@ -4,27 +4,29 @@
 
 ## 📚 Содержание
 
-1. [Основы Linux](01-linux/)
-2. [Сети и протоколы](02-networking/)
-3. [Скриптинг](03-scripting/)
-4. [Git и VCS](04-git/)
-5. [CI/CD](05-ci-cd/)
-6. [Docker](06-docker/)
-7. [Kubernetes](07-kubernetes/)
-8. [Облачные провайдеры](08-cloud/)
-9. [Infrastructure as Code](09-iac/)
-10. [Мониторинг](10-monitoring/)
-11. [Безопасность](11-security/)
-12. [Тестирование](12-testing/)
+| № | Раздел | Описание |
+|---|--------|---------|
+| 1️⃣ | [Основы Linux](01-linux/) | Команды, процессы, сеть, сервисы |
+| 2️⃣ | [Сети и протоколы](02-networking/) | OSI, TCP/IP, HTTP, DNS, инструменты |
+| 3️⃣ | [Скриптинг](03-scripting/) | Bash, Python, автоматизация |
+| 4️⃣ | [Git и VCS](04-git/) | Git, workflow, инструменты |
+| 5️⃣ | [CI/CD](05-ci-cd/) | Jenkins, GitHub Actions, GitLab CI |
+| 6️⃣ | [Docker](06-docker/) | Контейнеризация, образы, compose |
+| 7️⃣ | [Kubernetes](07-kubernetes/) | Оркестрация, объекты, Helm |
+| 8️⃣ | [Облачные провайдеры](08-cloud/) | AWS, Azure, GCP (self-hosted) |
+| 9️⃣ | [Infrastructure as Code](09-iac/) | Terraform, Ansible, Packer |
+| 🔟 | [Мониторинг](10-monitoring/) | Prometheus, Grafana, ELK |
+| 1️⃣1️⃣ | [Безопасность](11-security/) | DevSecOps, Vault, scanning |
+| 1️⃣2️⃣ | [Тестирование](12-testing/) | Terratest, Chaos Engineering |
 
 ---
 
 ## 🎯 Как использовать роудмап
 
-1. **Изучите теорию** - прочитайте раздел "Что изучить"
-2. **Изучите документацию** - перейдите по ссылкам
-3. **Пройдите тесты** - проверьте свои знания
-4. **Выполните практику** - сделайте упражнения
+1. **📖 Изучите теорию** - прочитайте раздел "Что изучить"
+2. **🔗 Изучите документацию** - перейдите по ссылкам
+3. **✅ Пройдите тесты** - проверьте свои знания через чекпоинты
+4. **💻 Выполните практику** - сделайте упражнения в папке `exercises/`
 
 ---
 
@@ -32,43 +34,33 @@
 
 ```
 devops-roadmap/
-├── README.md              # Главный роудмап
-├── 01-linux/              # Основы Linux
-│   ├── README.md
+├── README.md              # Главный роадмап
+├── 01-linux/              # 🐧 Основы Linux
+│   ├── README.md          # Темы + чекпоинты
+│   └── exercises/         # Практические задания
+├── 02-networking/         # 🌐 Сети и протоколы
 │   └── exercises/
-├── 02-networking/         # Сети и протоколы
-│   ├── README.md
+├── 03-scripting/          # 📜 Скриптинг
 │   └── exercises/
-├── 03-scripting/          # Скриптинг
-│   ├── README.md
+├── 04-git/                # 📦 Git и VCS
 │   └── exercises/
-├── 04-git/                # Git и VCS
-│   ├── README.md
+├── 05-ci-cd/              # ⚙️ CI/CD
 │   └── exercises/
-├── 05-ci-cd/              # CI/CD
-│   ├── README.md
+├── 06-docker/             # 🐳 Docker
 │   └── exercises/
-├── 06-docker/             # Docker
-│   ├── README.md
+├── 07-kubernetes/         # ☸️ Kubernetes
 │   └── exercises/
-├── 07-kubernetes/         # Kubernetes
-│   ├── README.md
+├── 08-cloud/              # ☁️ Облачные провайдеры
 │   └── exercises/
-├── 08-cloud/              # Облачные провайдеры
-│   ├── README.md
+├── 09-iac/                # 🏗️ Infrastructure as Code
 │   └── exercises/
-├── 09-iac/                # Infrastructure as Code
-│   ├── README.md
+├── 10-monitoring/         # 📊 Мониторинг
 │   └── exercises/
-├── 10-monitoring/         # Мониторинг
-│   ├── README.md
+├── 11-security/           # 🔐 Безопасность
 │   └── exercises/
-├── 11-security/           # Безопасность
-│   ├── README.md
+├── 12-testing/            # 🧪 Тестирование
 │   └── exercises/
-└── 12-testing/            # Тестирование
-    ├── README.md
-    └── exercises/
+└── tests/                 # Тесты для самоконтроля
 ```
 
 ---
@@ -77,13 +69,13 @@ devops-roadmap/
 
 | Этап | Время | Цель |
 |------|-------|------|
-| 1 | 2-3 месяца | Linux + Сети |
-| 2 | 1 месяц | Git + Scripting |
-| 3 | 1-2 месяца | Docker |
-| 4 | 1 месяц | CI/CD |
-| 5 | 2-3 месяца | Kubernetes |
-| 6 | 2-3 месяца | Cloud + IaC |
-| 7 | 1-2 месяца | Monitoring + Security |
-| 8 | 1 месяц | Портфолио + Поиск работы |
+| 1️⃣ | 2-3 месяца | Linux + Сети |
+| 2️⃣ | 1 месяц | Git + Scripting |
+| 3️⃣ | 1-2 месяца | Docker |
+| 4️⃣ | 1 месяц | CI/CD |
+| 5️⃣ | 2-3 месяца | Kubernetes |
+| 6️⃣ | 2-3 месяца | Cloud + IaC |
+| 7️⃣ | 1-2 месяца | Monitoring + Security |
+| 8️⃣ | 1 месяц | Портфолио + Поиск работы |
 
 **Удачи в пути DevOps инженера! 🚀**
